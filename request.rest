@@ -1,0 +1,80 @@
+//create new user
+POST http://localhost:5000/user 
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "password":"1234",
+    "confPassword":"1234"
+}
+###
+//get all users
+GET http://localhost:5000/user 
+
+###
+//login
+POST http://localhost:5000/login 
+Content-Type: application/json
+
+{
+  
+    "email": "admin1@gmail.com",
+    "password":"1234"
+
+}
+
+###
+GET http://localhost:5000/me
+
+//logout
+###
+DELETE http://localhost:5000/logout 
+
+//access all record
+###
+GET http://localhost:5000/record
+
+//get record by id
+###
+GET http://localhost:5000/record/bfc5604c-4b59-41a3-b94c-f39d0c313289
+
+###
+//add record
+POST http://localhost:5000/record 
+Content-Type: application/json
+
+{
+  
+    "nametype": "University Bill",
+    "category":"Spending",
+    "amount":"1400"
+
+}
+
+
+###
+//Delete record
+DELETE http://localhost:5000/record/7cb8e5b0-e5a2-477b-bf0c-2a6b4ccb336b
+
+###
+GET http://localhost:5000/amount
+
+###
+PATCH http://localhost:5000/user/40063c38-f2fc-4012-b131-5206ab28cf8f
+Content-Type: application/json
+
+{
+  
+    "income": "2500"
+   
+
+}
+
+###
+//get income by user id
+GET http://localhost:5000/user/40063c38-f2fc-4012-b131-5206ab28cf8f
+
+###
+//get uuid by user id
+GET http://localhost:5000/user/40063c38-f2fc-4012-b131-5206ab28cf8f
